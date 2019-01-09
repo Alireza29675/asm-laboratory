@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "playground:start": "nodemon --quiet app.js --watch app.playground.asm",
-    "setup": "mkdir lab/ && sudo apt install nasm && npm install"
+    "setup": "cp app.playground.sample.asm app.playground.asm && mkdir lab/ && sudo apt install nasm && npm install"
   },
   "author": "",
   "license": "ISC",
