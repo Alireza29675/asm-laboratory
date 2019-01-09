@@ -1,0 +1,18 @@
+{
+  "name": "asm-laboratory",
+  "version": "0.0.1",
+  "description": "Laboratory which has been made for writing and testing x86 assembly code",
+  "main": "index.js",
+  "scripts": {
+    "playground:start": "nodemon app.js --watch app.playground.asm",
+    "setup": "mkdir lab/ && sudo apt install nasm && npm install"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.4.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}
