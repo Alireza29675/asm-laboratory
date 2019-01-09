@@ -16,7 +16,9 @@ exec(`nasm -f elf32 ${asmFile} -o ${labDir}/app.o && ld -m elf_i386 ${labDir}/ap
         return;
     }
     exec(`${labDir}/app`, (err, stdout, stderr) => {
-        console.log(chalk`\n{bgGreen.black  ✔ }{green  Code was compiled successfully  }\n\n{bgWhite.black ${stdout || ' '}}\n`);
+        console.log(chalk`\n{bgGreen.black  ✔ }{green  Code was compiled successfully with code  }\n\n`);
+        console.log(chalk`{bgWhite.black ${stdout || ' '}}\n`)
+        console.log(chalk`process exited with code ${err.code}\n`)
     })
 })
 
