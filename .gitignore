@@ -62,3 +62,5 @@ typings/
 
 lab/
 .DS_Store
+
+app.playground.asm
