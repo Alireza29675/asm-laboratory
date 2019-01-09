@@ -5,9 +5,6 @@ A laboratory written in [Node.js](https://nodejs.org/) with purpose of easy-no-b
 
 > *Note:* This laboratory is just working on some Linux distributions such as [Debian](https://www.debian.org/) and [Ubuntu](https://www.ubuntu.com/), make contributions for more supports.
 
-> *Another Note:* Assembly is a low level and full permission platform, know what you're testing on your system!
-![Assembly Play](http://php.net/manual/tr/images/0baa1b9fae6aec55bbb73037f3016001-xkcd-goto.png)
-
 ## Installation
 First you have to install Node.js on your system. You can find and download it [here](https://nodejs.org/en/).
 
@@ -33,3 +30,6 @@ Enjoy!
 
 ## License
 MIT
+
+> *Last Note:* Assembly is a low level and full permission platform, know what you're testing on your system!
+![Assembly Play](http://php.net/manual/tr/images/0baa1b9fae6aec55bbb73037f3016001-xkcd-goto.png)
