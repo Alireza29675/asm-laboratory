@@ -12,13 +12,13 @@ exec(`nasm -f elf32 ${asmFile} -o ${labDir}/app.o && ld -m elf_i386 ${labDir}/ap
         const messages = err.message.split('\n')
                                     .filter(msg => msg.startsWith(asmFile))
                                     .map(msg => stylizeError(msg))
-        console.error(chalk`\n{bgRed.white  ✘ }{red  ${messages.length} compiler error${messages.length > 1 ? 's' : ''} occured!  }\n\n${messages.join('\n')}\n`);
+        console.error(chalk`\n{bgRed.white  ✘ }{red  ${messages.length} compiler error${messages.length > 1 ? 's' : ''} occured!}\n\n${messages.join('\n')}\n`);
         return;
     }
     exec(`${labDir}/app`, (err, stdout, stderr) => {
-        console.log(chalk`\n{bgGreen.black  ✔ }{green  Code was compiled successfully with code  }\n\n`);
+        console.log(chalk`\n{bgGreen.black  ✔ }{green  Code was compiled successfully}\n\n`);
         console.log(chalk`{bgWhite.black ${stdout || ' '}}\n`)
-        console.log(chalk`process exited with code ${err ? err.code : 0}\n`)
+        console.log(chalk`process exited with code {yellow ${err ? err.code : 0}}\n`)
     })
 })
 
@@ -28,5 +28,5 @@ const stylizeError = (error) => {
     const line = parts.shift().trim()
     const type = parts.shift().trim()
     const message = parts.join(':').trim()
-    return chalk`{bgRed.white  error line ${line.padEnd(MAX_ERROR_LINE_DIGITS, ' ')}} ${message}`;
+    return chalk`{bgRed.white  ${type} line ${line.padEnd(MAX_ERROR_LINE_DIGITS, ' ')}} ${message}`;
 }
